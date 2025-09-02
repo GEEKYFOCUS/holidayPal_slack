@@ -4,8 +4,8 @@
   "description": "A scaffold template for Slack apps",
   "main": "dist/app.js",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node ./dist/app.js",
+    "build": "node api.js && tsc",
+    "start": "node api.js && npm run build && node ./dist/app.js",
     "lint": "npx @biomejs/biome check *.ts listeners",
     "lint:fix": "npx @biomejs/biome check --write *.ts listeners",
     "test": "npm run build && npm run lint"
