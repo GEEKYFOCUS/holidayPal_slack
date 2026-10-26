@@ -4,8 +4,8 @@
   "description": "A scaffold template for Slack apps",
   "main": "dist/app.js",
   "scripts": {
-    "build": "node api.js && tsc",
-    "start": "node api.js && npm run build && node ./dist/app.js",
+    "build": "node init && tsc",
+    "start": "node init && npm run build && node ./dist/app.js",
     "lint": "npx @biomejs/biome check *.ts listeners",
     "lint:fix": "npx @biomejs/biome check --write *.ts listeners",
     "test": "npm run build && npm run lint"
@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "@slack/bolt": "^4.4.0",
-    "dotenv": "~17.2.1"
+    "dotenv": "~17.2.1",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.2",
